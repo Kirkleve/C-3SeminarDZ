@@ -6,14 +6,14 @@
 Console.Write("x1: ");
 int x1 = Coordinate("x","A");
 int y1 = Coordinate("y","A");
+int z1 = Coordinate("z","A");
 int x2 = Coordinate("x","B");
 int y2 = Coordinate("y","B");
-int x3 = Coordinate("x","C");
-int y3 = Coordinate("y","C");
+int z2 = Coordinate("z","B");
 
 double distance;
 
-distance = Math.Round(Math.Sqrt(Math.Pow(x1 - x2 - x3, 2) + Math.Pow(y1 - y2 - y3), 2),2);
+distance = Math.Round(Math.Sqrt(Math.Pow(x1 - x2, 2) + Math.Pow(y1 - y2, 2) + Math.Pow(z1 - z2, 2)), 2);
 Console.WriteLine($"Расстояние между точками = {distance}");
 
 int Coordinate(string coorName, string pointName)

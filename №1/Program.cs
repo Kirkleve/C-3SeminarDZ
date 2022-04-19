@@ -3,23 +3,22 @@
 Console.WriteLine("Введите пятизначное число ");
 int number = Convert.ToInt32(Console.ReadLine());
 string strnum = Convert.ToString(number);
-int[] arrayNum = new int[strnum.Length];
-int m = number%100000;
-while (strnum[0] == strnum[4] && strnum[1] == strnum[3])
+
+if ( number > strnum[4] || strnum[4] > number)
 {
-    if ( number > m || m < number)
+    Console.WriteLine("Неверное число, введите пятизначное");
+    Convert.ToInt32(Console.ReadLine());
+}    
+    if (strnum[0] == strnum[4] && strnum[1] == strnum[3])
     {
-        Console.WriteLine("Не то число введи пятизначное");
-        break;
+        Console.WriteLine("это число палиндрим");        
     }
     else
     {
         Console.WriteLine("это число не являеться палиндримом");
-        break;
-    }
-Console.WriteLine("Число " + number + " являеться палиндримом");       
-}
- 
+    } 
+
+
 
 
 
