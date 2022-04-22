@@ -3,9 +3,8 @@
 Console.WriteLine("Введите пятизначное число ");
 int number = Convert.ToInt32(Console.ReadLine());
 string strnum = Convert.ToString(number);
-int five = number%10000;
 
-while ( number == five || number == five)
+while ( number == strnum[4])
 {
     Console.WriteLine("Неверное число, введите пятизначное ");
     int number2 = Convert.ToInt32(Console.ReadLine());    
@@ -17,7 +16,8 @@ if (strnum[0] == strnum[4] && strnum[1] == strnum[3])
 }
 else 
 {
-        Console.WriteLine("Это число не являеться палиндромом");
+    Console.WriteLine("Это число не являеться палиндромом");
 }
+
 
 
